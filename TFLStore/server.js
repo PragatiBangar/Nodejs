@@ -1,11 +1,11 @@
 var express = require('express');
-var path =require('path');
+var path = require ('path');
 
 const app = express();
 
 //http handler get http://localhost:9000/
 //http request mapped with respective http handler
-var staticMiddleware = express.static(path.join(_dirname,"public"));
+var staticMiddleware = express.static(path.join(__dirname,"public"));
 var urlEncodedMiddleware = express.urlencoded({extended : true});
 var jsonParsingMiddleware = express.json();
 
@@ -25,6 +25,7 @@ app.post("/login",(request,Response) =>{
     if(credential.email === "ravi.tambade@transflower.in" && credential.password === "seed123"){
         console.log("validation successful");
         Response.redirect("/order.html");
+        Response.end();
     }
     else{
         console.log("Invalid User");

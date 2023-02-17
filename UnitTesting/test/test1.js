@@ -21,7 +21,7 @@ describe("Simple Calculation",() =>{
 
 describe("Test1",()=>{
     beforeEach(()=>{
-        Console.log("some initial setup for Test1");
+        console.log("some initial setup for Test1");
     });
 
     it("test case 1 : addition",()=>{
